@@ -4,6 +4,13 @@ import java.util.List;
 
 import com.ubs.calculator.service.INumberFilter;
 
+/**
+ * @author Sumit Borhade
+ * 
+ * This class performs the filtration using the list of specified filters.
+ * 
+ */
+
 public class FilterUnwantedData {
 
 	private List<INumberFilter> filters;

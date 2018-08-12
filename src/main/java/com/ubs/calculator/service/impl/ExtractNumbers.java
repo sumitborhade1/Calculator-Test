@@ -1,5 +1,13 @@
 package com.ubs.calculator.service.impl;
 
+/**
+ * @author Sumit Borhade
+ * 
+ * This class is used to extract the number from the operational input.
+ * 
+ * It returns the numbers using the given single or multiple delimiters of multiple lengths.
+ * 
+ */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

@@ -7,6 +7,15 @@ import com.ubs.calculator.exception.GenericAddException;
 import com.ubs.calculator.exception.NegativeNumbersPresentException;
 import com.ubs.calculator.service.IValidationRule;
 
+/**
+ * @author Sumit Borhade
+ * 
+ * This class validates the input numbers and throws exception if input contains negative numbers.
+ * 
+ * 
+ * Exception message contains the list of all negative numbers.
+ * 
+ */
 public class NegativeNumberValidation implements IValidationRule {
 
 	public void isInputValid(List<Integer> numbers) throws GenericAddException {

@@ -10,6 +10,19 @@ import org.junit.Test;
 
 import com.ubs.calculator.exception.GenericAddException;
 
+/**
+ * @author Sumit Borhade
+ *
+ * The test cases are written to handle all the scenarios which were mentioned in the problem statement.
+ * 
+ * Initially all the test cases were failing.
+ * 
+ * But by the time development was completed, they passed.
+ * 
+ * These test cases helped to refactor the code after each iteration.
+ * 
+ * I preferred a variation of BDD with When [Action] Then [Verification] while naming the methods.
+ */
 public class AdditionFlowTest {
 
 	AdditionFlow additionFlow;

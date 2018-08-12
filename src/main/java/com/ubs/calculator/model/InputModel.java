@@ -1,5 +1,11 @@
 package com.ubs.calculator.model;
 
+/**
+ * @author Sumit Borhade
+ *
+ * This is a model class to store delimiter and operationalInput.
+ * 
+ */
 public class InputModel {
 
 	private String delimiter;

@@ -7,6 +7,12 @@ import com.ubs.calculator.constants.CalculatorConstants;
 import com.ubs.calculator.model.InputModel;
 import com.ubs.calculator.util.GenericUtils;
 
+/**
+ * @author Sumit Borhade
+ * 
+ * This class performs the filtration using the list of specified filters.
+ * 
+ */
 public class FindDelimiterAndOperationalInput {
 
 	private String defaultDelimiter;

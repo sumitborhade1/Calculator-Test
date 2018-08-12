@@ -17,9 +17,25 @@ import com.ubs.calculator.service.impl.PerformAddition;
 import com.ubs.calculator.service.impl.PerformValidations;
 
 /**
- * This is the starting point for Addition
  * @author Sumit Borhade
- *
+ * 
+ * This is the starting point for Addition.
+ * 
+ * When the object for this class is created, the constructor will be invoked and initialization will happen.
+ * 
+ * initialize() method is crucial as it initializes key aspect of the logic.
+ * 
+ * This class also sets the rules for different kinds of validations and filters.
+ * 
+ * Code follows mainly open close principle along with other important SOLID design principles
+ * 
+ * Main steps involved are
+ * 1. Find delimiter and operational input
+ * 2. Extract numbers
+ * 3. Validate input
+ * 4. Filter
+ * 5. Show result
+ * 
  */
 public class AdditionFlow {
 
@@ -33,27 +49,25 @@ public class AdditionFlow {
 	private PerformAddition performAddition;
 	
 	public AdditionFlow() {
+		initialize();
+	}
+	
+
+	public long additionOrchestrator(String input) throws GenericAddException {
+		InputModel inputModel = findDelimiterAndOperationalInput.delimiterOrchestrator(input);
+		List<Integer> numbers = extractNumbers.extractNumbers(inputModel);
+		performValidations.validateInput(numbers);
+		numbers = filterUnwantedData.filterData(numbers);
+		long sum = performAddition.addition(numbers);
+		return sum;
+	}
+	
+	private void initialize() {
 		findDelimiterAndOperationalInput();
 		extractNumbers();
 		validationRules();
 		filters();
 		addition();
-	}
-	
-	//1. Find delimiter and operational input
-	//2. Extract numbers
-	//3. Validate input
-	//4. Filter
-	//5. Show result
-
-	public long additionOrchestrator(String input) throws GenericAddException {
-		AdditionFlow add = new AdditionFlow();
-		InputModel inputModel = add.findDelimiterAndOperationalInput.delimiterOrchestrator(input);
-		List<Integer> numbers = add.extractNumbers.extractNumbers(inputModel);
-		add.performValidations.validateInput(numbers);
-		numbers = add.filterUnwantedData.filterData(numbers);
-		long sum = add.performAddition.addition(numbers);
-		return sum;
 	}
 	
 	private void findDelimiterAndOperationalInput() {
